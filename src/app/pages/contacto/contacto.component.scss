@@ -1,0 +1,49 @@
+#title {
+  height: 75vh;
+  width: 100vw;
+  background: url('/assets/images/fer-smile.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  .row {
+    height: 100%;
+    .col.s8 {
+      padding: 10%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .col.s4 {
+      padding: 5% 3%;
+    }
+  }
+}
+
+h3 {
+  font-weight: 600;
+}
+
+#social-grid {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .social-item {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    padding: 1em;
+    &:last-child {
+      border-right: solid 1px;
+    }
+    a {
+      color: #E0E0E0;
+      font-weight: 600;
+      font-size: 17px;
+      mat-icon {
+        font-size: 16px;
+      }
+    }
+  }
+}

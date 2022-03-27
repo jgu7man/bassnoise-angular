@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bassnoise-2c1d4": {
+      "hosting": {
+        "bassnoise": [
+          "bassnoise-2c1d4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bassnoise-2c1d4"
+  }
+}

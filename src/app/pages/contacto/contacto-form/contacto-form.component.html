@@ -1,0 +1,58 @@
+<form class="row" [formGroup]="contactoForm">
+
+  <!-- Nombre -->
+  <mat-form-field
+    appearance="legacy"
+    class="col s12">
+      <mat-label>Nombre</mat-label>
+      <input
+      matInput
+      type="text"
+      name="nombre"
+      formControlName="nombre"
+      required
+      >
+      <mat-error *ngIf="contactoForm.hasError('required', 'nombre')">
+          Nombre es necesario
+      </mat-error>
+  </mat-form-field>
+
+
+  <!-- Celular -->
+  <mat-form-field
+    appearance="legacy"
+    class="col s12">
+      <mat-label>Celular</mat-label>
+      <input
+      matInput
+      type="text"
+      name="celular"
+      formControlName="celular"
+      required
+      >
+      <mat-error *ngIf="contactoForm.hasError('required', 'celular')">
+          El celular es necesario
+      </mat-error>
+  </mat-form-field>
+
+
+  <!-- Descripcion -->
+  <mat-form-field
+    appearance="legacy"
+    class="col s12">
+      <mat-label>Descripcion</mat-label>
+      <textarea 
+        matInput
+        name="description" 
+        formControlName="description" 
+        cols="30" 
+        rows="5"
+        [mat-autosize]="true"
+      ></textarea>
+  </mat-form-field>
+
+
+  <div class="col s12 center">
+    <button class="form-btn">Enviar</button>
+  </div>
+</form>

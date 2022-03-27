@@ -40,3 +40,5 @@ p, span, input, textarea, select, div {
   @include text-gradient;
   text-shadow: 0px 0px 26px #4dc4d266;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
