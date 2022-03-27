@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+@import './assets/styles/normalize.scss';
+@import './assets/styles/responsive.scss';
+@import './assets/styles/text.scss';
 
 
 html, body {
   padding: 0;
   margin: 0;
-  overflow-y: hidden;
+  overflow-x: hidden;
   width: 100vw;
   font-family: 'Montserrat', sans-serif;
   background-color: #0e0e0e;
@@ -14,4 +17,14 @@ html, body {
 
 h1, h2, .underlined {
   font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.section-title {
+  margin: 2em 0;
+  font-size: 2.5em;
+  text-align: center;
+  background: -webkit-linear-gradient(#4DC4D2, #5E3A96);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 26px #4dc4d266;
 }

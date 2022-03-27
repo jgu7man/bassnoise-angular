@@ -1,0 +1,18 @@
+#realeses-container {
+  width:100%;
+  min-width: 380px;
+}
+
+#realeses-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap row;
+}
+
+.realese-item {
+  transition: .2s;
+}
+.realese-item:hover {
+  transform: scale(1.1)
+}
