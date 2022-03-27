@@ -1,0 +1,19 @@
+<header class="start-container" [ngClass]="{opened}">
+  <div class="logo-container">
+    <div class="logo-box">
+      <div class="logo-image">
+        <app-logo-svg
+        (click)="opened = !opened"
+        ></app-logo-svg>
+      </div>
+    </div>
+  </div>
+
+  <div id="menu-container">
+    <app-main-menu
+    (clicked)="opened = !opened"
+    ></app-main-menu>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

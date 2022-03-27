@@ -1,0 +1,101 @@
+@mixin center-center {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+@mixin glowfx {
+  box-shadow: 0 0 32px 21px rgb(77 200 233 / 20%);
+}
+
+@mixin glowfx-out-in($opacity: .20) {
+  box-shadow: 0 0 32px 21px rgba(77, 200, 233, $opacity), inset 0 0 32px 21px rgba(77, 200, 233, $opacity);
+}
+
+@mixin toggle {
+  transition: 0.4s cubic-bezier(0, -0.01, 0, 1.04);
+}
+
+.start-container {
+  @include toggle;
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/images/fer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  @include center-center;
+  height: 70%;
+  width: 66%;
+  @include toggle;
+  .logo-box {
+    @include center-center;
+    @include toggle;
+    width: 100%;
+    height: 200px;
+    border: 16px solid rgb(77 200 233);
+    border-radius: 32px;
+    box-shadow: 0 0 32px 21px rgb(77 200 233 / 20%), inset 0 0 32px 21px rgb(77 200 233 / 20%);
+    .logo-image {
+      @include center-center;
+      @include toggle;
+      width:85%;
+    }
+  }
+}
+
+.logo-box {
+  animation: ping 3s ease-in-out infinite;
+}
+
+@keyframes ping {
+  0% { @include glowfx-out-in(.20)}
+  50% { @include glowfx-out-in(.40)}
+  100% { @include glowfx-out-in(.20)}
+}
+
+#menu-container {
+  height:10%;
+  width: 50%;
+  @include center-center;
+  
+}
+
+.start-container.opened {
+  height: 10vh;
+  flex-flow: row;
+  .logo-container {
+    .logo-box {
+      border: none;
+      box-shadow: none;
+      animation: none;
+      height: 100%;
+      .logo-image {
+        height: 100%;
+        justify-content: flex-start;
+        ::ng-deep {
+          app-logo-svg {
+            width: 50%;
+            height: 100%;
+            .cls-1 {
+              fill: #E0E0E0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  #menu-container {
+    ::ng-deep {
+      #main-menu {
+        justify-content: space-around;
+      }
+    }
+  }
+}
