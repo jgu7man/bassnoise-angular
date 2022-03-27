@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MxResponsive } from 'src/app/services/mx-responsive.service';
 
 @Component({
   templateUrl: './inicio.component.html',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor (
+    public responsive: MxResponsive
+  ) { }
 
   ngOnInit(): void {
   }

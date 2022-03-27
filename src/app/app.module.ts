@@ -19,6 +19,7 @@ import { ContactoFormComponent } from './pages/contacto/contacto-form/contacto-f
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { FooterComponent } from './components/start/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatIconModule } from '@angular/material/icon';
     InicioComponent,
     ServiciosComponent,
     ContactoComponent,
-    ContactoFormComponent
+    ContactoFormComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
