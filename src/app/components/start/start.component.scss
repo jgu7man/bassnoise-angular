@@ -47,6 +47,7 @@
     box-shadow: 0 0 32px 21px rgb(77 200 233 / 20%), inset 0 0 32px 21px rgb(77 200 233 / 20%);
     @media screen and (max-width: 768px) {
       height: 120px;
+      border: 8px solid rgb(77 200 233);
     }
     .logo-image {
       @include center-center;
@@ -120,3 +121,4 @@
     }
   }
 }
+
