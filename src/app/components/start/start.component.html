@@ -1,13 +1,22 @@
 <header class="start-container" [ngClass]="{opened}">
-  <div class="logo-container">
-    <div class="logo-box">
-      <div class="logo-image">
-        <app-logo-svg
-        [routerLink]="['/']"
-        (click)="opened = !opened"
-        ></app-logo-svg>
-      </div>
+  <div class="content">
+
+    <div class="video-box"
+    *ngIf="!opened"
+    [style.width]="responsive.large ? '66%' : '90%'"
+    [style.height]="responsive.large? '75%' : '50%'"
+    >
+      <app-embeded-video></app-embeded-video>
     </div>
+
+
+    <div class="logo-box">
+      <app-logo-svg
+      [routerLink]="['/']"
+      (click)="opened = !opened"
+      ></app-logo-svg>
+    </div>
+
   </div>
 
   <div id="menu-container">
@@ -15,6 +24,8 @@
     (clicked)="opened = true"
     ></app-main-menu>
   </div>
+
+  <app-social-icons></app-social-icons>
 </header>
 
 <router-outlet></router-outlet>

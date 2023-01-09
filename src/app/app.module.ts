@@ -20,9 +20,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FooterComponent } from './components/start/footer/footer.component';
+import { EmbededVideoComponent } from './components/start/embeded-video/embeded-video.component';
+import { SocialIconsComponent } from './components/start/social-icons/social-icons.component';
+
 
 @NgModule({
   declarations: [
+    SocialIconsComponent,
     AppComponent,
     StartComponent,
     MainMenuComponent,
@@ -31,7 +35,8 @@ import { FooterComponent } from './components/start/footer/footer.component';
     ServiciosComponent,
     ContactoComponent,
     ContactoFormComponent,
-    FooterComponent
+    FooterComponent,
+    EmbededVideoComponent
   ],
   imports: [
     BrowserModule,

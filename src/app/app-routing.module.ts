@@ -7,7 +7,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 
 const routes: Routes = [
   { path: '', component: StartComponent, children: [
-    { path: 'inicio', component: InicioComponent, data:{page: 'inicio'} },
+    { path: 'musica', component: InicioComponent, data:{page: 'musica'} },
     { path: 'servicios', component: ServiciosComponent, data:{page: 'servicios'} },
     { path: 'contacto', component: ContactoComponent, data:{page: 'contacto'}},
   ] },

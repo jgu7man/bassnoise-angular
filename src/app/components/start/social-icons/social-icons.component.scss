@@ -1,0 +1,37 @@
+#social-icons > a {
+  color: #e0e0e0;
+  margin: 0px 5px;
+  font-size: 24px;
+}
+
+.fa-stack {
+  height: 24px;
+  line-height: 0;
+  width: 24px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.fa-apple-music .fa-square {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fa-apple-music .fa-music {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -56%);
+}
+
+.fa-apple-music .fa-music:before {
+  content: '\266B';
+}
+.fa-apple-music .fa-music {
+  color: #202020;
+}

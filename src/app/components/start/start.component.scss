@@ -19,7 +19,7 @@
 .start-container {
   @include toggle;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background: url('/assets/images/fer-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,38 +27,38 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 768px){
-    background-position: 35%;
-  }
-}
-
-.logo-container {
-  @include center-center;
-  height: 70%;
-  width: 66%;
-  @include toggle;
-  .logo-box {
+  .content {
     @include center-center;
     @include toggle;
+    flex-direction: column;
+    justify-content: space-evenly ;
+    height: 100%;
     width: 100%;
-    height: 200px;
-    border: 16px solid rgb(77 200 233);
-    border-radius: 32px;
-    box-shadow: 0 0 32px 21px rgb(77 200 233 / 20%), inset 0 0 32px 21px rgb(77 200 233 / 20%);
-    @media screen and (max-width: 768px) {
-      height: 120px;
-      border: 8px solid rgb(77 200 233);
-    }
-    .logo-image {
+    .logo-box {
       @include center-center;
       @include toggle;
-      width:85%;
+      width: 33%;
     }
   }
-}
+  #menu-container {
+    height:10%;
+    width: 50%;
+    @include center-center;
 
-.logo-box {
-  animation: ping 3s ease-in-out infinite;
+  }
+  @media screen and (max-width: 768px){
+    background-position: 35%;
+    justify-content: space-between;
+    height: 92%;
+    .content {
+      flex-direction: column-reverse;
+      height: 66%;
+      .logo-box {
+        height: 120px;
+        width: 66%;
+      }
+    }
+  }
 }
 
 @keyframes ping {
@@ -67,54 +67,66 @@
   100% { @include glowfx-out-in(.20)}
 }
 
-#menu-container {
-  height:10%;
-  width: 50%;
-  @include center-center;
-  
-}
-
 .start-container.opened {
   height: 10vh;
   flex-flow: row;
-  @media screen and (max-width: 768px) {
-    flex-flow: column;
+  .content {
+    width: 33%;
+    padding: 0 1em;
+    align-items: baseline;
   }
-  .logo-container {
-    @media screen and (max-width: 768px) {
-      height: 40%;
-    }
-    .logo-box {
-      border: none;
-      box-shadow: none;
-      animation: none;
+  .logo-box {
+    width: 66% !important;
+    .logo-image {
       height: 100%;
-      .logo-image {
-        height: 100%;
-        justify-content: flex-start;
-        @media screen and (max-width: 768px) {
-          justify-content: center;
-        }
-        ::ng-deep {
-          app-logo-svg {
-            width: 50%;
-            height: 100%;
-            .cls-1 {
-              fill: #E0E0E0 !important;
-            }
+      justify-content: flex-start;
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
+      ::ng-deep {
+        app-logo-svg {
+          width: 50%;
+          height: 100%;
+          .cls-1 {
+            fill: #E0E0E0 !important;
           }
         }
       }
     }
   }
-  #menu-container {
-    @media screen and (max-width: 768px) {
-      width: 75%;
+  app-social-icons {
+    width: 33%;
+    padding: 0 1em;
+    ::ng-deep #social-icons {
+      display: flex;
+      justify-content: flex-end;
     }
-    ::ng-deep {
-      #main-menu {
-        justify-content: space-around;
-        @media screen and (max-width: 768px) {
+  }
+  #menu-container {
+    ::ng-deep #main-menu {
+      justify-content: space-around;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-flow: column;
+    height: 35vh;
+    justify-content: space-evenly;
+    .content {
+      align-items: center;
+      width: 100%;
+      height: 50px;
+    }
+    app-social-icons {
+      width: 100%;
+      ::ng-deep #social-icons {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+    #menu-container {
+      width: 75%;
+      ::ng-deep {
+        #main-menu {
           flex-direction: row;
         }
       }
